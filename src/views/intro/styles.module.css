@@ -8,3 +8,8 @@
   color: white;
   padding: 22px;
 }
+
+#hideIntro {
+  display: none;
+  background: blue;
+}

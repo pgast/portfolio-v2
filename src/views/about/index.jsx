@@ -1,7 +1,10 @@
-import styles from './index.module.css'
+import styles from './styles.module.css'
 
 const AboutView = () => (
-  <div className={styles.aboutContainer}>
+  <div 
+    id="about-section"
+    className={styles.aboutContainer}
+  >
     <h1>About view</h1>
   </div>
 )

@@ -1,9 +1,14 @@
-import styles from './index.module.css'
+import styles from './styles.module.css'
 
-const IntroView = () => (
-  <div className={styles.introContainer}>
-    <h1>Intro</h1>
-  </div>
-)
+const IntroView = ({ introHasBeenShown }) => {
+  return (
+    <div 
+      className={styles.introContainer}
+      id={introHasBeenShown ? styles.hideIntro : undefined}
+    >
+      <h1>Intro</h1>
+    </div>
+  )
+}
 
 export default IntroView

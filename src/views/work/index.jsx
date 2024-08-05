@@ -1,7 +1,10 @@
-import styles from './index.module.css'
+import styles from './styles.module.css'
 
 const WorkView = () => (
-  <div className={styles.workContainer}>
+  <div 
+    id="work-section"
+    className={styles.workContainer}
+  >
     <h1>Work view</h1>
   </div>
 )
