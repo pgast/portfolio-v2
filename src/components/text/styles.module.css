@@ -1,0 +1,32 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap');
+
+.mainFontStyle {
+  font-family: "Anek Devanagari", sans-serif;
+}
+
+.titleBanner {
+  font-weight: 700;
+  font-size: 72px;
+}
+
+.sectionTitle {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.paragraphTitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.paragraph {
+  font-size: 16px;
+  font-weight: 400;
+}

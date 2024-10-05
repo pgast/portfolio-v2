@@ -2,7 +2,7 @@ import styles from './styles.module.css'
 
 const AboutView = () => (
   <div 
-    id="about-section"
+    id="about"
     className={styles.aboutContainer}
   >
     <h1>About view</h1>
