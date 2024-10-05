@@ -2,7 +2,7 @@ import styles from './styles.module.css'
 
 const WorkView = () => (
   <div 
-    id="work-section"
+    id="work"
     className={styles.workContainer}
   >
     <h1>Work view</h1>

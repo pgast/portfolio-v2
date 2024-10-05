@@ -2,7 +2,7 @@ import styles from './styles.module.css'
 
 const ContactView = () => (
   <div 
-    id="contact-section"
+    id="contact"
     className={styles.contactContainer}
   >
     <h1>Contact view</h1>
