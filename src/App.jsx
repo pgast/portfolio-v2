@@ -26,13 +26,13 @@ function App() {
   }
 
   return (
-    <>
+    <div id="mainContainer">
       <Navbar />
       <LandingView />
       <WorkView />
       <AboutView />
       <ContactView />
-    </>
+    </div>
   )
 }
 
