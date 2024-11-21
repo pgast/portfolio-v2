@@ -7,6 +7,8 @@ import LandingView from './views/landing'
 import WorkView from './views/work'
 import AboutView from './views/about'
 import ContactView from './views/contact'
+import { SectionTitle, Subtitle } from "./components/text"
+
 
 function App() {
   const [introHasBeenShown, setIntroHasBeenShown] = useState(false)
@@ -26,13 +28,31 @@ function App() {
   }
 
   return (
-    <>
+    <div id="mainContainer">
       <Navbar />
       <LandingView />
+
+      {/* Mobile Work Header */}
+      <div className="fixedHeader">
+        <Subtitle>
+          Work
+        </Subtitle>
+      </div>
       <WorkView />
+
+      {/* Mobile About Header */}
+      <div className="fixedHeader">
+        <Subtitle>
+          About
+        </Subtitle>
+      </div>
       <AboutView />
+
+      {/* Mobile Invisible Header */}
+      <div className="fixedHeader invisibleHeader">
+      </div>
       <ContactView />
-    </>
+    </div>
   )
 }
 
