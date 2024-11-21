@@ -14,23 +14,29 @@ const getProjectWidth = (isSelected, idx) => {
   return "609px"
 }
 
-const projectClasses = (idx, selectedProjectIdx) => {
+const projectClasses = (idx, selectedProjectIdx, widthIsNotDesktop) => {
   const {
     project,
     isSelected,
     moreProjects,
     projectContent,
+    projectTitle: projectTitleStyle,
+    hiddenProjectTitle,
   } = styles
+
+  let projectTitle = widthIsNotDesktop ? `${projectTitleStyle} ${hiddenProjectTitle}` : projectTitleStyle
 
   if (selectedProjectIdx !== idx) return {
     projectStyle: project,
     projectContent,
-    moreProjects: project
+    moreProjects: project,
+    projectTitle,
   }
 
   return {
     projectStyle: `${project} ${isSelected}`,
     moreProjects: `${project} ${isSelected} ${moreProjects}`,
+    projectTitle,
     projectContent: idx !== 0 ? `${projectContent} ${isSelected}` : projectContent,
   }
 }
@@ -87,7 +93,11 @@ const WorkView = () => {
     >
       <div className={styles.containerGrid}>
         {projects.map((project, idx) => { 
-          const { projectStyle, projectContent } = projectClasses(idx, selectedProjectIdx)
+          const { 
+            projectStyle, 
+            projectContent, 
+            projectTitle 
+          } = projectClasses(idx, selectedProjectIdx, widthIsNotDesktop)
           const isSelected = selectedProjectIdx === idx
 
           return (      
@@ -99,7 +109,7 @@ const WorkView = () => {
               style={{ width: getProjectWidth(isSelected, idx) }}
             >
               <div className={projectContent}>
-                <div className={styles.projectTitle}>
+                <div className={projectTitle}>
                   <Subtitle>
                     {project.name}
                   </Subtitle>
@@ -120,17 +130,22 @@ const WorkView = () => {
                 </HideableContent>
 
                 {/* Mobile */}
-                <HideableContent isVisible={widthIsNotDesktop}>
-                  <Paragraph>
-                    {project.info}
-                  </Paragraph>
-                  {/* <div className={styles.projectStack}>
-                    {project.stack.map((stack) => <Paragraph>{stack}</Paragraph>)}
+                <HideableContent 
+                  isVisible={widthIsNotDesktop}
+                  className={styles.mobileHideableContent}
+                >
+                  <div className={styles.mobileProjectContent}>
+                    <Subtitle>
+                      {project.name}
+                    </Subtitle>
+                    <Paragraph>
+                      {project.info}
+                    </Paragraph>
                   </div>
                   <div className={styles.buttonsContainer}>
                     <Button label="Code"/>
                     <Button label="Try it"/>
-                  </div> */}
+                  </div>
                 </HideableContent>
               </div>
             </div>

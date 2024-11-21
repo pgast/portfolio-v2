@@ -30,6 +30,7 @@
   writing-mode: horizontal-tb;
 }
 
+.mobileProjectContent > h3,
 .project.isSelected .projectContent > .projectTitle h3 {
   margin-top: -1px;
   line-height: 30px;
@@ -68,7 +69,6 @@
   display: flex;
   margin-top: 224px;
   position: relative;
-  /* flex-direction: column; */
   justify-content: center;
   height: calc(100% - 224px);
 }
@@ -99,6 +99,10 @@
   margin: 0;
 }
 
+.fixedHeader {
+  display: none;
+}
+
 @media (max-width: 1300px) {
   .containerGrid {
     width: calc(100% - 88px);
@@ -111,9 +115,9 @@
   }
 
   .containerGrid {
-    flex-direction: column;
-    width: 100%;
     margin: 0;
+    width: 100%;
+    flex-direction: column;
     grid-template-columns: repeat(8, 1fr);
   }
 
@@ -122,17 +126,57 @@
     border-left: none;
     border-bottom: 1px solid white;
     width: 100%;
-    height: 141px;
     padding: 38px 0;
   }
 
   .projectContent {
     margin-top: unset;
     padding: 0 44px;
+    width: 100%;
   }
 
   .projectTitle {
     writing-mode: horizontal-tb;
+  }
+
+  .projectTitle.hiddenProjectTitle {
+    display: none;
+  }
+
+  .mobileHideableContent {
+    display: flex;
+    justify-content: space-between;
+    /* align-content: space-between; */
+    width: 100%;
+  }
+
+  .mobileHideableContent .mobileProjectContent  {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: calc(100% - 102px);
+  }
+
+  .mobileHideableContent .mobileProjectContent h3 {
+    margin: 0;
+  }
+
+  .mobileHideableContent .mobileProjectContent p {
+    margin: none;
+  }
+
+  .buttonsContainer {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .buttonsContainer  div {
+    width: 38px;
+  }
+
+  .buttonsContainer > div:first-child {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -143,5 +187,26 @@
 
   .projectContent {
     padding: 0 22px;
+  }
+
+  .mobileHideableContent {
+    flex-direction: column;
+  }
+
+  .mobileHideableContent .mobileProjectContent  {
+    margin: 0;
+    width: 100%;
+  }
+
+  .buttonsContainer {
+    flex-direction: row;
+    width: 100%;
+    height: 36px;
+    margin-top: 22px;
+  }
+
+  .buttonsContainer > div:first-child {
+    margin-bottom: 0px;
+    margin-right: 10px;
   }
 }

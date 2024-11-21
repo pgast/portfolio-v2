@@ -7,3 +7,32 @@
 #mainContainer {
   width: 100%;
 }
+
+.fixedHeader {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .fixedHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: red;
+    top: 90px;
+    height: 66px;
+    z-index: 2;
+    position: -webkit-sticky; /* Safari & IE */
+    position: sticky;
+    top: 90px;
+  }
+
+  .fixedHeader h3 {
+    line-height: 30px;
+    height: 20px;
+  }
+
+  .invisibleHeader {
+    background: rgb(255, 119, 66);
+  }
+}
