@@ -1,7 +1,168 @@
-.aboutContainer {
-  height: 100vh;
+.container {
+  height: fit-content;
+  width: 100%;
   display: flex;
   background: rgb(238, 117, 184);
   color: white;
-  padding: 22px;
+  align-items: center;
+}
+
+.containerGrid {
+  display: flex;
+  margin: 0 auto;
+  height: 100%;
+  width: 1200px;
+}
+
+.leftSection {
+  width: 584px;
+}
+
+.mainSection {
+  width: 100%;
+  padding-left: 80px;
+}
+
+.fixedLeftHeader {
+  height: fit-content;
+  display: flex;
+  top: 90px;
+  background: gray;
+
+  position: -webkit-sticky;
+  position: sticky;
+  line-height: 30px;
+}
+
+/* Experience block header */
+.experienceBlockHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.experienceBlockHeader > div {
+  display: flex;
+  flex-direction: column;
+  height: 55px;
+  justify-content: space-between;
+}
+
+.bulletpoints p,
+.educationBlockHeader p,
+.experienceBlockHeader p {
+  margin: 0;
+}
+
+.educationBlockHeader p,
+.experienceBlockHeader p {
+  font-weight: 600;
+}
+
+.educationBlockHeader > div > h3,
+.experienceBlockHeader > div > h3 {
+  line-height: 28px;
+  margin: 0;
+}
+
+.educationBlockHeader p,
+.experienceBlockHeader > div > p {
+  font-weight: 600;
+  margin: 0;
+  line-height: 15px;
+}
+/* End - Experience Block header */
+
+/*  Skills Block Header */
+.skillsCategory > h3 {
+  line-height: 28px;
+  margin: 0;
+}
+
+.skillsGroup {
+  margin: 12px 0 76px 0;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.skillsGroup > div {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+/* End - Skills Block header */
+
+/* Education Block Header */
+.educationBlockHeader {
+  display: flex;
+  flex-direction: column;
+}
+
+.educationBlockHeader > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.educationBlockHeader > div:last-child {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.educationBlockHeader > div:last-child > ul {
+  margin-top: 33px;
+}
+
+.educationBlockTitle {
+  display: flex;
+  flex-direction: column;
+  height: 55px;
+  justify-content: space-between;
+}
+
+.educationBlockTitle > h3 {
+  margin: 0;
+  line-height: 28px;
+}
+/* End - Education Block Header */
+
+.bulletpoints {
+   margin: 36px 0 76px 0;
+   padding: 0;
+   padding-left: 13px;
+   line-height: 17px;
+}
+
+.bulletpoints li {
+  margin-bottom: 15px; 
+}
+
+.bulletpoints li:last-child {
+  margin-bottom: 0;
+}
+
+
+@media (max-width: 1300px) {
+  .containerGrid {
+    width: calc(100% - 88px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    height: fit-content;
+  }
+
+  .containerGrid {
+    margin: 0;
+    width: 100%;
+    flex-direction: column;
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .containerGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
