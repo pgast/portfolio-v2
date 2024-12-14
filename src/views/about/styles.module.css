@@ -1,21 +1,28 @@
 .container {
-  height: fit-content;
   width: 100%;
   display: flex;
-  background: rgb(238, 117, 184);
   color: white;
+  height: fit-content;
   align-items: center;
+  background: rgb(238, 117, 184);
 }
 
 .containerGrid {
-  display: flex;
-  margin: 0 auto;
   height: 100%;
+  display: flex;
   width: 1200px;
+  margin: 0 auto;
+  padding-top: 80px;
 }
 
 .leftSection {
+  top: 90px;
   width: 584px;
+  display: flex;
+  position: sticky;
+  flex-direction: column;
+  position: -webkit-sticky;
+  height: calc(100vh - 90px);
 }
 
 .mainSection {
@@ -24,15 +31,21 @@
 }
 
 .fixedLeftHeader {
-  height: fit-content;
+  height: 79px;
   display: flex;
-  top: 90px;
-  background: gray;
-
-  position: -webkit-sticky;
-  position: sticky;
   line-height: 30px;
+  border-bottom: 1px solid white;
 }
+
+.fixedLeftHeader:last-child {
+  border-bottom: none;
+}
+
+#isDisplayingSection {
+  color: green;
+  height: calc(100% - 237px);
+}
+
 
 /* Experience block header */
 .experienceBlockHeader {
@@ -41,9 +54,9 @@
 }
 
 .experienceBlockHeader > div {
+  height: 55px;
   display: flex;
   flex-direction: column;
-  height: 55px;
   justify-content: space-between;
 }
 
@@ -60,28 +73,28 @@
 
 .educationBlockHeader > div > h3,
 .experienceBlockHeader > div > h3 {
-  line-height: 28px;
   margin: 0;
+  line-height: 28px;
 }
 
 .educationBlockHeader p,
 .experienceBlockHeader > div > p {
-  font-weight: 600;
   margin: 0;
+  font-weight: 600;
   line-height: 15px;
 }
 /* End - Experience Block header */
 
 /*  Skills Block Header */
 .skillsCategory > h3 {
-  line-height: 28px;
   margin: 0;
+  line-height: 28px;
 }
 
 .skillsGroup {
-  margin: 12px 0 76px 0;
   display: flex;
   flex-wrap: wrap;
+  margin: 12px 0 76px 0;
 
 }
 
@@ -99,8 +112,8 @@
 
 .educationBlockHeader > div {
   display: flex;
-  justify-content: space-between;
   align-items: start;
+  justify-content: space-between;
 }
 
 .educationBlockHeader > div:last-child {
@@ -127,7 +140,7 @@
 /* End - Education Block Header */
 
 .bulletpoints {
-   margin: 36px 0 76px 0;
+   margin: 20px 0 76px 0;
    padding: 0;
    padding-left: 13px;
    line-height: 17px;
