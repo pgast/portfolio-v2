@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import { Subtitle, Paragraph } from '../../components/text'
+import { ParagraphTitle, Paragraph } from '../../components/text'
 import Button from '../../components/button'
 import { workHistory, skillTech, education } from '../../constants/about'
 import { useEffect, useState } from "react"
@@ -11,9 +11,9 @@ const renderWorkExperience = () => {
         <div key={index}>
           <div className={styles.experienceBlockHeader}>
             <div>
-              <Subtitle>
+              <ParagraphTitle>
                 {work.header.title}
-              </Subtitle>
+              </ParagraphTitle>
               <Paragraph>
                 {work.header.company}
               </Paragraph>
@@ -41,9 +41,9 @@ const renderSkills = () => {
     <div id="skills" className="aboutSection">
       {skills.map((skillCategory, index) => (
         <div key={index} className={styles.skillsCategory}>
-          <Subtitle>
+          <ParagraphTitle>
             {skillCategory}
-          </Subtitle>
+          </ParagraphTitle>
           <div className={styles.skillsGroup}>
             {skillTech.skills[skillCategory].map((skill, idx) => <Button key={idx} label={skill} />)}
           </div>
@@ -58,9 +58,9 @@ const renderEducation = () => {
     <div id="education" className={`aboutSection ${styles.educationBlockHeader}`}>
       <div>
         <div className={styles.educationBlockTitle}>
-          <Subtitle>
+          <ParagraphTitle>
             {education.school.title}
-          </Subtitle>
+          </ParagraphTitle>
           <Paragraph>
             {education.school.name}
           </Paragraph>
@@ -144,25 +144,25 @@ const AboutView = () => {
             className={styles.fixedLeftHeader} 
             id={isDisplayingSection("workExperience")}
           >
-            <Subtitle>work experience</Subtitle>
+            <ParagraphTitle>work experience</ParagraphTitle>
           </div>
           <div 
             className={styles.fixedLeftHeader} 
             id={isDisplayingSection("skills")}
           >
-            <Subtitle>skills</Subtitle>
+            <ParagraphTitle>skills</ParagraphTitle>
           </div>
           <div 
             className={styles.fixedLeftHeader} 
             id={isDisplayingSection("education")}
           >
-            <Subtitle>education</Subtitle>
+            <ParagraphTitle>education</ParagraphTitle>
           </div>
           <div 
             className={styles.fixedLeftHeader} 
             id={isDisplayingSection("awardsAndRecognition")}
           >
-            <Subtitle>awards and recognition</Subtitle>
+            <ParagraphTitle>awards and recognition</ParagraphTitle>
           </div>
         </div>
 

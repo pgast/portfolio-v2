@@ -33,12 +33,12 @@ function App() {
       <LandingView />
 
       {/* Mobile Work Header */}
-      <div className="fixedHeader">
+      {/* <div className="fixedHeader">
         <Subtitle>
           Work
         </Subtitle>
       </div>
-      <WorkView />
+      <WorkView /> */}
 
       {/* Mobile About Header */}
       <div className="fixedHeader">

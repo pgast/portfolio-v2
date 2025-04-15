@@ -10,9 +10,9 @@ const Navbar = () => (
         </a>
       </div>
       <div className={styles.buttonsContainer}>
-        <a href="#work">
+        {/* <a href="#work">
           <MenuItem>Work</MenuItem>
-        </a>
+        </a> */}
         <a href="#about">
           <MenuItem>About</MenuItem>
         </a>

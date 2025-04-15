@@ -54,7 +54,7 @@ export const skillTech = {
 }
 
 export const awards = {
-  title: 'awards / recognition',
+  title: 'Awards / Recognition',
   columns: [
     [
       "First Prize / Toy design proposal",
@@ -105,7 +105,7 @@ export const education = {
 }
 
 export const workHistory = {
-  title: "work experience",
+  title: "Work experience",
   jobs: [
     {
       header: {
